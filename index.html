@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Sugar Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="welcome">
+    <h1>Welcome to the Blood Sugar Checker</h1>
+    <p>Track your sugar levels and get personalized diet recommendations!</p>
+</div>
+
+<div class="container">
+    <form id="sugarForm">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required onchange="togglePregnantOption()">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <div id="pregnantOption" style="display: none;">
+            <label>Are you pregnant?</label>
+            <select id="pregnant" name="pregnant">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" required>
+
+        <label for="fasting">Fasting Sugar Level (mg/dL):</label>
+        <input type="number" id="fasting" name="fasting" required>
+
+        <label for="afterMeal">1-2 Hours After Meal (mg/dL):</label>
+        <input type="number" id="afterMeal" name="afterMeal" required>
+
+        <label for="diet">Diet Preference:</label>
+        <select id="diet" name="diet" required>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="non-vegetarian">Non-Vegetarian</option>
+            <option value="mixed">Mixed (Veg & Non-Veg)</option>
+        </select>
+
+        <button type="submit">Check Levels</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<!-- Bottom corner text sections -->
+<div class="bottom-left">Made with ❤️</div>
+<div class="bottom-right">"Your HEALTH matters the most!😊"</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
