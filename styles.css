@@ -1,0 +1,235 @@
+/* Background images with faster, smoother movement */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=1920&q=80') repeat;
+    background-size: cover;
+    background-attachment: fixed;  /* Ensures background stays fixed on scroll */
+    animation: moveBackground 35s linear infinite;  /* Faster and smoother background movement */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #2c3e50;
+}
+
+/* Animation for moving background */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 4000px 4000px;  /* Increased movement range */
+    }
+}
+
+/* Bottom left and bottom right text */
+.bottom-left, .bottom-right {
+    position: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s, box-shadow 0.4s;
+    z-index: 999;
+}
+
+/* Bottom left text */
+.bottom-left {
+    bottom: 35px;
+    left: 35px;
+}
+
+.bottom-left:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Bottom right text */
+.bottom-right {
+    bottom: 35px;
+    right: 35px;
+}
+
+.bottom-right:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Welcome message */
+.welcome {
+    text-align: center;
+    margin: 25px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.45);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+}
+
+.welcome:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 45px rgba(0,0,0,.45);
+}
+
+.welcome h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #0a0a0a;  /* Warmer and more vibrant color */
+    font-size: 42px;
+    text-shadow: 3px 3px 10px #b96818;
+}
+
+.welcome p {
+    font-family: 'Roboto', sans-serif;
+    color: #191c1e;
+    font-size: 24px;
+}
+
+/* Main container with improved dimensions */
+.container {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    width: 90%;
+    max-width: 650px;  /* Ensures a max width for large screens */
+    min-height: 450px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s;
+}
+
+.container:hover {
+    transform: scale(1.06);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Form elements with smoother effects */
+label, input, select, button {
+    width: 100%;
+    margin: 15px 0;
+    padding: 18px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    transition: box-shadow 0.4s, transform 0.4s;
+}
+
+input:focus, select:focus, button:focus {
+    box-shadow: 0 0 18px rgba(41, 128, 185, 0.8);
+    outline: none;
+}
+
+/* Color styling with gradients */
+.diabetic {
+    background: linear-gradient(135deg, #ff4d4d, #cc0000); /* Red gradient */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.pre-diabetic {
+    background: linear-gradient(135deg, #ffeb3b, #fbc02d); /* Yellow gradient */
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.normal {
+    background: linear-gradient(135deg, #66bb6a, #388e3c); /* Green gradient */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+.gestational-diabetes {
+    background: linear-gradient(135deg, #ff9800, #f57c00); /* Orange gradient for Gestational Diabetes */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+
+/* Button with gradient and hover effects */
+button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.4s, transform 0.4s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4834d4, #00cec9);
+    transform: translateY(-6px) scale(1.08);
+}
+
+/* Result section with subtle hover effect */
+#result {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 18px;
+    background: rgba(240, 248, 255, 0.97);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    transition: all 0.4s ease;
+}
+
+#result:hover {
+    background: #e8f5e9;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer .left, .footer .right {
+        margin: 10px 0;
+    }
+}
+
+/* Fully responsive design */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 85%;
+        min-height: 400px;
+        padding: 30px;
+    }
+
+    .welcome h1 {
+        font-size: 38px;
+    }
+
+    .welcome p {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+/* Improved touch interactions for mobile */
+button:active {
+    transform: scale(0.95);
+}
